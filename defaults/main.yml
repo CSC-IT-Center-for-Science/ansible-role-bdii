@@ -22,4 +22,11 @@ site_bdii_files:
 # - site-urls.conf
 
 site_bdii_site_urls:
- - { regexp: "^LOCAL  ldap://loaclhost:2170/mds-vo-name=resource,o=grid$", line: "LOCAL  ldap://localhost:2170/mds-vo-name=resource,o=grid" }
+ - { regexp: "^LOCAL.*", line: "LOCAL  ldap://localhost:2170/mds-vo-name=resource,o=grid" }
+
+site_bdii_site_name: "T3_Example"
+site_bdii_site_bdii_host: "bdii.example.com"
+
+site_bdii_glite_info_site_defaults:
+ - { regexp: "^SITE_NAME={{ site_bdii_site_name }}$", line: "SITE_NAME={{ site_bdii_site_name }}" }
+ - { regexp: "^SITE_BDII_HOST={{ site_bdii_site_bdii_host }}$", line: "SITE_BDII_HOST={{ site_bdii_site_bdii_host }}" }
