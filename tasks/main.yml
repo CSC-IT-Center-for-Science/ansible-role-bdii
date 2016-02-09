@@ -21,7 +21,7 @@
    template: src=files/{{ item }} dest=/etc/bdii/gip/ mode=0640 backup=yes
    register: reg-site_bdii_site_info
    when: site_bdii_enabled and site_bdii_files.0 != ""
-   with_items: {{ site_bdii_files }}
+   with_items: site_bdii_files
    notify:
     - restart bdii
 
