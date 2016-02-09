@@ -14,7 +14,6 @@ site_bdii_packages:
  - emi-bdii-site
  - bdii
  - bdii-config-site
- - glite-yaim-bdii
 
 # somehow generate these files and put them in files/
 site_bdii_files:
