@@ -10,6 +10,12 @@ umd_rpm: "http://repository.egi.eu/sw/production/umd/4/centos7/x86_64/base/umd-r
 
 site_bdii_enabled: True
 site_bdii_packages:
+ - emi-bdii-site
  - bdii
  - bdii-config-site
  - glite-yaim-bdii
+
+# somehow generate these files and put them in files/
+site_bdii_files:
+ - site-urls.conf.j2
+ - glite-info-site-defaults.conf.j2

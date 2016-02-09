@@ -1,2 +1,5 @@
 ---
 # handlers file for ansible-role-bdii
+#
+- name: restart bdii
+  service: name=bdii state=restarted
