@@ -17,5 +17,5 @@ site_bdii_packages:
 
 # somehow generate these files and put them in files/
 site_bdii_files:
- - site-urls.conf.j2
- - glite-info-site-defaults.conf.j2
+ - site-urls.conf
+ - glite-info-site-defaults.conf
