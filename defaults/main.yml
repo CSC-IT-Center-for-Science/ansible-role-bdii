@@ -18,5 +18,8 @@ site_bdii_packages:
 
 # somehow generate these files and put them in files/
 site_bdii_files:
- - site-urls.conf
  - glite-info-site-defaults.conf
+# - site-urls.conf
+
+site_bdii_site_urls:
+ - { regexp: "^LOCAL  ldap://loaclhost:2170/mds-vo-name=resource,o=grid$", line: "LOCAL  ldap://localhost:2170/mds-vo-name=resource,o=grid" }
