@@ -21,6 +21,8 @@
    lineinfile:
      regexp='{{ item.regexp }}'
      line='{{ item.line }}'
+     create=yes
+     backup=yes
    with_items: site_bdii_site_urls
    notify:
     - restart bdii
