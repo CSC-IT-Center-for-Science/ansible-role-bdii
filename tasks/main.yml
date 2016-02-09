@@ -9,10 +9,10 @@
    yum: name={{ umd_rpm }} state=installed
    when: ansible_os_family == "RedHat" and umd_repo_rpm
 
- - name: install bdii packages
+ - name: install site_bdii packages
    action: >
      {{ ansible_pkg_mgr }}
      name="{{ item }}"
      state=installed
-   with_items: bdii_packages
-   when: bdii_enabled
+   with_items: site_bdii_packages
+   when: site_bdii_enabled

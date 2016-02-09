@@ -8,8 +8,8 @@ umd_repo_rpm: True
 # So we install this rpm by default
 umd_rpm: "http://repository.egi.eu/sw/production/umd/4/centos7/x86_64/base/umd-release-4.0.0-1.el7.noarch.rpm"
 
-bdii_enabled: True
-bdii_packages:
+site_bdii_enabled: True
+site_bdii_packages:
  - bdii
  - bdii-config-site
  - glite-yaim-bdii
