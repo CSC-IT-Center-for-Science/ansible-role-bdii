@@ -1,0 +1,13 @@
+[umd{{ umd_version }}]
+name=umd{{ umd_version }}
+baseurl=http://repository.egi.eu/sw/production/umd/{{ umd_version }}/centos7/x86_64/base
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+gpgcheck=1
+enabled=1
+
+[umd{{ umd_version }}-updates]
+name=umd{{ umd_version }}-updates
+baseurl=http://repository.egi.eu/sw/production/umd/{{ umd_version }}/centos7/x86_64/updates
+gpgkey=http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
+gpgcheck=1
+enabled=1

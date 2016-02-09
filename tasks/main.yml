@@ -1,2 +1,18 @@
 ---
 # tasks file for ansible-role-bdii
+#
+ - name: setup UMD4 repos
+   template: src=umd4.repo.j2 dest=/etc/yum.repos.d/umd.repo mode=0644
+   when: ansible_os_family == "RedHat" and umd_repo_file
+
+ - name: install umd4-release repos
+   yum: name={{ umd_rpm }} state=installed
+   when: ansible_os_family == "RedHat" and umd_repo_rpm
+
+ - name: install bdii packages
+   action: >
+     {{ ansible_pkg_mgr }}
+     name="{{ item }}"
+     state=installed
+   with_items: bdii_packages
+   when: bdii_enabled
