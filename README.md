@@ -1,5 +1,6 @@
 ansible-role-bdii
 =========
+[![Build Status](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-bdii.svg?branch=master)](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-bdii)
 
 Installs and configures BDII
 
