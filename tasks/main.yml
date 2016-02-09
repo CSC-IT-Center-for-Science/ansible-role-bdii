@@ -43,8 +43,3 @@
 
  - name: enable bdii service
    service: name=bdii enabled=yes
-
-# TODO: howto run /opt/glite/yaim/bin/yaim -c -s site-info.def -n BDII_site on EL7?
-# - name: run yaim
-#   command: 
-#   when: reg-site_bdii_site_info.changed
