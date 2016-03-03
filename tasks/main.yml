@@ -41,5 +41,14 @@
    notify:
     - restart bdii
 
+ - name: setup resource gip provider symlink
+   file: src={{ item }}
+         dest=/var/lib/bdii/gip/provider/{{ item | basename }}
+         state=link
+   when: bdii_resource_providers.0 != ""
+   with_items: bdii_resource_providers
+   notify:
+    - restart bdii
+
  - name: enable and start bdii service
    service: name=bdii enabled=yes state=started

@@ -29,3 +29,7 @@ site_bdii_site_bdii_host: "bdii.example.com"
 site_bdii_glite_info_site_defaults:
  - { regexp: "^SITE_NAME={{ site_bdii_site_name }}$", line: "SITE_NAME={{ site_bdii_site_name }}" }
  - { regexp: "^SITE_BDII_HOST={{ site_bdii_site_bdii_host }}$", line: "SITE_BDII_HOST={{ site_bdii_site_bdii_host }}" }
+
+bdii_resource_providers:
+ - ""
+# - "/usr/sbin/dcache-info-provider"
