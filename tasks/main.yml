@@ -41,5 +41,5 @@
    notify:
     - restart bdii
 
- - name: enable bdii service
-   service: name=bdii enabled=yes
+ - name: enable and start bdii service
+   service: name=bdii enabled=yes state=started

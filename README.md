@@ -14,7 +14,20 @@ Role Variables
 
 See defaults/main.yml
 
-For the configuration of an site bdii then there are several variables that will probably have to be adjusted.
+To disable and only install bdii set variables like so:
+
+<pre>
+umd_repo_file: False
+umd_repo_rpm: False
+site_bdii_enabled: True
+site_bdii_packages:
+ - bdii
+
+site_bdii_files: []
+site_bdii_site_urls: []
+site_bdii_glite_info_site_defaults: []
+</pre>
+
 
 Dependencies
 ------------
