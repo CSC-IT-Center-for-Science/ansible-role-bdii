@@ -14,7 +14,7 @@
      {{ ansible_pkg_mgr }}
      name="{{ item }}"
      state=installed
-   with_items: site_bdii_packages
+   with_items: "{{ site_bdii_packages }}"
    when: site_bdii_enabled
 
  - name: add site-urls
@@ -25,7 +25,7 @@
      create=yes
      backup=yes
      owner={{ site_bdii_user }}
-   with_items: site_bdii_site_urls
+   with_items: "{{ site_bdii_site_urls }}"
    notify:
     - restart bdii
 
@@ -37,7 +37,7 @@
      create=yes
      backup=yes
      owner={{ site_bdii_user }}
-   with_items: site_bdii_glite_info_site_defaults
+   with_items: "{{ site_bdii_glite_info_site_defaults }}"
    notify:
     - restart bdii
 
@@ -46,7 +46,7 @@
          dest=/var/lib/bdii/gip/provider/{{ item | basename }}
          state=link
    when: bdii_resource_providers.0 != ""
-   with_items: bdii_resource_providers
+   with_items: "{{ bdii_resource_providers }}"
    notify:
     - restart bdii
 
