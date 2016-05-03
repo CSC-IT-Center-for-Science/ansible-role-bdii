@@ -33,3 +33,5 @@ site_bdii_glite_info_site_defaults:
 bdii_resource_providers:
  - ""
 # - "/usr/sbin/dcache-info-provider"
+
+bdii_resource_provider_force_symlink: False

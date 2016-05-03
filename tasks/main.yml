@@ -47,6 +47,7 @@
    file: src={{ item }}
          dest=/var/lib/bdii/gip/provider/{{ item | basename }}
          state=link
+         force={{ bdii_resource_provider_force_symlink }}
    when: bdii_resource_providers.0 != ""
    with_items: "{{ bdii_resource_providers }}"
    notify:
