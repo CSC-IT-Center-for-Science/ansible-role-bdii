@@ -43,6 +43,19 @@
    notify:
     - restart bdii
 
+ - name: add bdii.conf
+   lineinfile:
+     dest="/etc/bdii/bdii.conf"
+     regexp='{{ item.regexp }}'
+     line='{{ item.line }}'
+     create=yes
+     backup=yes
+   with_items: "{{ site_bdii_conf_lines }}"
+   when: site_bdii_conf_enabled
+   notify:
+    - restart bdii
+
+
  - name: setup resource gip provider symlink
    file: src={{ item }}
          dest=/var/lib/bdii/gip/provider/{{ item | basename }}

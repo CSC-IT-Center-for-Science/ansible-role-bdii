@@ -35,3 +35,11 @@ bdii_resource_providers:
 # - "/usr/sbin/dcache-info-provider"
 
 bdii_resource_provider_force_symlink: False
+
+# Set this to True to add some lines to bdii.conf
+site_bdii_conf_enabled: False
+site_bdii_conf_lines:
+ - { regexp: "^FIX_GLUE=.*", line: "FIX_GLUE=yes" }
+ - { regexp: "^SLAPD_CONF=.*", line: "SLAPD_CONF=/etc/bdii/bdii-slapd.conf" }
+
+

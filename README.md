@@ -26,7 +26,12 @@ site_bdii_packages:
 site_bdii_files: []
 site_bdii_site_urls: []
 site_bdii_glite_info_site_defaults: []
+
+# set site_bdii_conf_enabled to True to add more config lines to bdii.conf
+site_bdii_conf_enabled: True
 </pre>
+
+
 
 
 Dependencies
