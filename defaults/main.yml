@@ -41,5 +41,6 @@ site_bdii_conf_enabled: False
 site_bdii_conf_lines:
  - { regexp: "^FIX_GLUE=.*", line: "FIX_GLUE=yes" }
  - { regexp: "^SLAPD_CONF=.*", line: "SLAPD_CONF=/etc/bdii/bdii-slapd.conf" }
+ - { regexp: "^BDII_IPV6_SUPPORT=.*", line: "BDII_IPV6_SUPPORT=yes" }
 
 
